@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>creat pices</title>
+    <link rel="stylesheet" href="../practice/p2.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+    <section>
+        <div class="hamburg" onclick="myfunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+    </section>
+    <section>
+        <div>
+            <button class="accordion">section1</button>
+            <div class="panel">
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti cumque dolor perferendis fugiat
+                    quibusdam neque, incidunt, molestiae deserunt adipisci laudantium eum fugit sint minus vero vel quos
+                    quidem eius sapiente.
+                    Ea ducimus consequuntur cumque adipisci hic quis possimus. Magni unde tenetur dicta maiores suscipit
+                    molestias cumque aspernatur iusto libero ullam dolor quasi quae, commodi repellat sunt, illum non
+                    asperiores expedita.
+                </p>
+            </div>
+            <button class="accordion">section1</button>
+            <div class="panel">
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti cumque dolor perferendis fugiat
+                    quibusdam neque, incidunt, molestiae deserunt adipisci laudantium eum fugit sint minus vero vel quos
+                    quidem eius sapiente.
+                    Ea ducimus consequuntur cumque adipisci hic quis possimus. Magni unde tenetur dicta maiores suscipit
+                    molestias cumque aspernatur iusto libero ullam dolor quasi quae, commodi repellat sunt, illum non
+                    asperiores expedita.
+                </p>
+            </div>
+            <button class="accordion">section1</button>
+            <div class="panel">
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti cumque dolor perferendis fugiat
+                    quibusdam neque, incidunt, molestiae deserunt adipisci laudantium eum fugit sint minus vero vel quos
+                    quidem eius sapiente.
+                    Ea ducimus consequuntur cumque adipisci hic quis possimus. Magni unde tenetur dicta maiores suscipit
+                    molestias cumque aspernatur iusto libero ullam dolor quasi quae, commodi repellat sunt, illum non
+                    asperiores expedita.
+                </p>
+            </div>
+
+        </div>
+    </section>
+    <section>
+        <div class="tab">
+            <button class="tablink" onclick="opencity(event,'london')">london</button>
+            <button class="tablink" onclick="opencity(event,'spain')">spain</button>
+            <button class="tablink" onclick="opencity(event,'kawait')">kawait</button>
+        </div>
+        <div id="london" class="tabcontent">
+            <h3>london</h3>
+            <p>london is the capital of uk</p>
+        </div>
+        <div id="spain" class="tabcontent">
+            <h3>spain</h3>
+            <p>spain is twin city</p>
+        </div>
+        <div id="kawait" class="tabcontent">
+            <h3>kawait</h3>
+            <p>kawait is twin city</p>
+        </div>
+    </section>
+    <section>
+        <div id="lm" class="tabcontent1">
+            <h3>london</h3>
+            <p>london is capital</p>
+        </div>
+        <div id="sp" class="tabcontent1">
+            <h3>spain</h3>
+            <p>nice place</p>
+        </div>
+        <div id="kw" class="tabcontent1">
+            <h3>kawait</h3>
+            <p>rich country</p>
+        </div>
+        <div class="tab1">
+            <button class="tablink1" onclick="test(event,'lm')">london</button>
+            <button class="tablink1" id="defaultOpen" onclick="test(event,'sp')">spain</button>
+            <button class="tablink1" onclick="test(event,'kw')">kawait</button>
+        </div>
+    </section>
+    <nav>
+        <ul>
+
+            <li class="mn"><a href="#">Home</a></li>
+            <li class="mn"> <a href="#">News</a></li>
+            <li class="mn"> <a href="#">Contact</a></li>
+            <li class="mn"> <a href="#">About</a></li>
+            <li class="menu-btn">
+
+                <div class="menu-bar" onclick="mfun(this)">
+                    <div class="bar11"></div>
+                    <div class="bar22"></div>
+                    <div class="bar33"></div>
+                </div>
+            </li>
+        </ul>
+
+    </nav>
+    <div class="fordata">user1</div>
+    <button id="openBtn" aria-expanded="false" aria-controls="modal">
+        Open Modal
+    </button>
+
+    <!-- Modal -->
+    <div id="modal" hidden role="dialog" aria-modal="true">
+        <p>This is a modal dialog</p>
+
+        <!-- Icon-only Close Button -->
+        <button id="closeBtn" aria-label="Close dialog">
+            ✖
+        </button>
+    </div>
+
+    </section>
+
+
+    <script>
+        function myfunction(x) {
+            x.classList.toggle("change");
+        }
+
+
+        let override = document.getElementsByClassName("accordion");
+
+        for (let i = 0; i < override.length; i++) {
+            override[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+
+                let panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            })
+        }
+
+        function opencity(event, cityname) {
+            var tab, tabcontent, tablink;
+            tab = document.getElementsByClassName("tabcontent");
+            for (let i = 0; i < tab.length; i++) {
+                tab[i].style.display = "none";
+            }
+
+            document.getElementById(cityname).style.display = "block";
+
+        }
+        tab1 = document.getElementsByClassName("tabcontent1");
+        for (i = 0; i < tab1.length; i++) {
+
+        }
+        function test(event, cityname) {
+            var tab1, tacontent1;
+            tab1 = document.getElementsByClassName("tabcontent1");
+            for (let i = 0; i < tab1.length; i++) {
+
+                if (tab1[i].style.display = " none") {
+
+                }
+            }
+            document.getElementById(cityname).style.display = "block";
+        }
+        document.getElementById("defaultOpen").click();
+
+        function mfun(x) {
+            var t, v;
+            x.classList.toggle("change");
+            v = document.querySelectorAll(".mn");
+            for (let i = 0; i < v.length; i++) {
+                if (v[i].style.display === "block") {
+                    v[i].style.display = "none";
+
+                } else {
+                    v[i].style.display = "block";
+                }
+            }
+            let b = document.getElementsByClassName("fordata")[0];
+            let a = document.createAttribute("data-user-id");
+            a.value = 20;
+            b.setAttributeNode(a);
+
+            b.setAttribute("data-role", "admin");
+            console.log("attribute value:" + b.getAttribute("data-role"), b.attributes[2], b.dataset);
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const modal = document.getElementById("modal");
+            const openBtn = document.getElementById("openBtn");
+            const closeBtn = document.getElementById("closeBtn");
+
+            // Open modal
+            openBtn.addEventListener("click", () => {
+                modal.hidden = false; // SHOW modal
+                openBtn.setAttribute("aria-expanded", "true");
+            });
+
+            // Close modal
+            closeBtn.addEventListener("click", () => {
+                modal.hidden = true; // HIDE modal
+                openBtn.setAttribute("aria-expanded", "false");
+            });
+
+        });
+
+
+
+    </script
+</body>
+
+</html>

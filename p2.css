@@ -1,0 +1,162 @@
+.bar1,
+.bar2,
+.bar3 {
+  width: 40px;
+  height: 5px;
+  background: #000;
+  margin: 6px;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+.change .bar2 {
+  opacity: 0;
+}
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+
+.hamburg {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.accordion {
+  border-style: none;
+  width: 100%;
+  height: 5em;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.accordion:hover,
+.active {
+  background: #0c7ee8;
+  cursor: pointer;
+}
+.panel {
+  overflow: hidden;
+  display: none;
+  transition: 0.2s ease-out;
+}
+
+.tab,
+.tab1 {
+  width: 100%;
+  height: 2em;
+  margin-top: 2em;
+  background-color: aqua;
+  padding: 20px;
+}
+.tab .tablink,
+.tablink1 {
+  border-style: none;
+  background: none;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+.tabcontent,
+.tabcontent1 {
+  display: none;
+}
+
+nav ul {
+  border-radius: 2px;
+  background: #555;
+  color: rgb(230, 183, 96);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 3em;
+}
+nav a {
+  text-decoration: none;
+  color: white;
+  padding: 8px 12px;
+  font-size: 20px;
+}
+nav a:hover {
+  background: #dc4343;
+  overflow: hidden;
+}
+nav li {
+  list-style: none;
+}
+.menu-btn {
+  margin-left: auto;
+  margin-right: 12px;
+  display: none;
+}
+.menu-bar {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.bar11,
+.bar22,
+.bar33 {
+  width: 40px;
+  height: 5px;
+  background: #000;
+  margin: 6px;
+  border-radius: 2px;
+  transition: 0.2s;
+}
+
+.change .bar11 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+.change .bar22 {
+  opacity: 0;
+}
+.change .bar33 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+#modal {
+      position: fixed;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -30%);
+      padding: 20px;
+      background: #fff;
+      border: 2px solid #333;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    button {
+      cursor: pointer;
+      padding: 6px 10px;
+    }
+@media screen and (max-width: 777px) {
+  nav ul {
+    border-radius: 2px;
+    color: rgb(230, 183, 96);
+    background: none;
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+  }
+  nav a {
+    text-decoration: none;
+    color: blue;
+    font-size: 20px;
+  }
+  nav a:hover {
+    background: #dc4343;
+    overflow: hidden;
+  }
+  nav .mn {
+    list-style: none;
+    padding: 5px;
+    display: none;
+  }
+  .menu-btn {
+    margin-left: auto;
+    margin-right: 12px;
+    display: block;
+  }
+}
